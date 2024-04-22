@@ -111,9 +111,11 @@ pub mod parse_pptx {
     pub fn get_text(file_path: String) {
         unzip_file(&file_path, "./pptx-extract").unwrap();
 
-        let files_num = fs::read_dir("./pptx-extract/ppt/slides/").iter().count();
+        let files_num = fs::read_dir("./pptx-extract/ppt/slides").iter().count();
 
-        let paths = get_sorted_list(files_num as u32);
+        print!("{}", files_num.clone());
+
+        let paths = get_sorted_list(32);
 
         println!("{:?}", paths);
 
