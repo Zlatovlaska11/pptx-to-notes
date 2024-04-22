@@ -98,6 +98,12 @@ pub mod parse_pptx {
         file_entries
     }
 
+    fn get_slide_number(path: String) -> u32 {
+        let paths = fs::read_dir(path).unwrap();
+
+        paths.count() as u32
+    }
+
     use std::io;
 
     fn read_dir_sorted<P: AsRef<Path>>(path: P) -> Result<Vec<fs::DirEntry>, io::Error> {
@@ -111,19 +117,17 @@ pub mod parse_pptx {
     pub fn get_text(file_path: String) {
         unzip_file(&file_path, "./pptx-extract").unwrap();
 
-        let files_num = fs::read_dir("./pptx-extract/ppt/slides").iter().count();
+        let files_num = get_slide_number("./pptx-extract/ppt/slides".to_string());
 
         print!("{}", files_num.clone());
 
-        let paths = get_sorted_list(32);
+        let paths = get_sorted_list(files_num - 1);
 
         println!("{:?}", paths);
 
-
         for path in paths {
-            match path{
+            match path {
                 Ok(path) => {
-
                     let path = path.unwrap().path();
 
                     if path.is_file() {
@@ -132,7 +136,9 @@ pub mod parse_pptx {
                         }
                     }
                 }
-                Err(e) => {println!("error");}
+                Err(e) => {
+                    println!("error");
+                }
             }
         }
     }
