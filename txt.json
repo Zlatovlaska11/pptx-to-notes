@@ -1,0 +1,425 @@
+{
+  "sld": {
+    "cSld": {
+      "spTree": {
+        "nvGrpSpPr": {
+          "cNvPr": "",
+          "cNvGrpSpPr": "",
+          "nvPr": ""
+        },
+        "grpSpPr": {
+          "xfrm": {
+            "off": "",
+            "ext": "",
+            "chOff": "",
+            "chExt": ""
+          }
+        },
+        "sp": {
+          "nvSpPr": {
+            "cNvPr": "",
+            "cNvSpPr": "",
+            "nvPr": ""
+          },
+          "spPr": {
+            "xfrm": {
+              "off": "",
+              "ext": ""
+            },
+            "prstGeom": {
+              "avLst": ""
+            }
+          },
+          "txBody": {
+            "bodyPr": {
+              "spAutoFit": ""
+            },
+            "lstStyle": "",
+            "p": [
+              {
+                "r": [
+                  {
+                    "rPr": {
+                      "solidFill": {
+                        "srgbClr": ""
+                      }
+                    },
+                    "t": "V 16. stol. vznikla řada renesančních skvostů"
+                  },
+                  {
+                    "rPr": "",
+                    "t": ":"
+                  }
+                ]
+              },
+              {
+                "pPr": {
+                  "buFont": "",
+                  "buChar": ""
+                },
+                "r": [
+                  "rPr": "",
+                  "t": "letohrádek královny Anny (Belveder) a Hvězda v Praze,"
+                ]
+              },
+              {
+                "pPr": {
+                  "buFont": "",
+                  "buChar": ""
+                },
+                "r": [
+                  {
+                    "rPr": "",
+                    "t": "zámky"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "(Litomyšl, Červená Lhota, Nelahozeves, Velké Losiny, Opočno aj.),"
+                  }
+                ]
+              },
+              {
+                "pPr": {
+                  "buFont": "",
+                  "buChar": ""
+                },
+                "r": [
+                  {
+                    "rPr": "",
+                    "t": "dochovala se"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "historická centra měst"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "(Telč, Slavonice, Dačice, Prachatice)."
+                  }
+                ]
+              },
+              {
+                "r": [
+                  {
+                    "rPr": "",
+                    "t": "Některé renesanční památky se dostaly na prestižní seznam světového kulturního dědictví"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "UNESCO"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "(Litomyšl, Telč)."
+                  }
+                ]
+              },
+              {
+                "endParaRPr": ""
+              },
+              {
+                "r": [
+                  {
+                    "rPr": "",
+                    "t": "Za vlády"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Rudolfa II."
+                  },
+                  {
+                    "rPr": "",
+                    "t": "(1576-1611) se centrum habsburské monarchie přesouvá do Prahy. Na jeho dvoře působila řada šarlatánů (Edward"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Kelley"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "), vědců (Tycho de Brahe, Kepler) i umělců, například manýrističtí malíři"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Giuseppe"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Arcimboldo"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "["
+                  },
+                  {
+                    "rPr": "",
+                    "t": "džuzepe"
+                  },
+                  {
+                    "rPr": "",
+                    "t": ""
+                  },
+                  {
+                    "rPr": "",
+                    "t": "arčimboldo"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "] (alegorie ročních dob a živlů),"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Hans von"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Achen"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "nebo"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Bartoloměj"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Spranger"
+                  },
+                  {
+                    "rPr": "",
+                    "t": ". Rudolfovy rozsáhlé umělecké sbírky si odvezli Švédové jako válečnou kořist."
+                  }
+                ],
+                "br": {
+                  "rPr": ""
+                },
+                "endParaRPr": ""
+              }
+            ]
+          }
+        }
+      },
+      "extLst": {
+        "ext": {
+          "creationId": ""
+        }
+      }
+    },
+    "clrMapOvr": {
+      "masterClrMapping": ""
+    }
+  }
+    "cSld": {
+      "spTree": {
+        "nvGrpSpPr": {
+          "cNvPr": "",
+          "cNvGrpSpPr": "",
+          "nvPr": ""
+        },
+        "grpSpPr": {
+          "xfrm": {
+            "off": "",
+            "ext": "",
+            "chOff": "",
+            "chExt": ""
+          }
+        },
+        "sp": {
+          "nvSpPr": {
+            "cNvPr": "",
+            "cNvSpPr": "",
+            "nvPr": ""
+          },
+          "spPr": {
+            "xfrm": {
+              "off": "",
+              "ext": ""
+            },
+            "prstGeom": {
+              "avLst": ""
+            }
+          },
+          "txBody": {
+            "bodyPr": {
+              "spAutoFit": ""
+            },
+            "lstStyle": "",
+            "p": [
+              {
+                "r": [
+                  {
+                    "rPr": {
+                      "solidFill": {
+                        "srgbClr": ""
+                      }
+                    },
+                    "t": "V 16. stol. vznikla řada renesančních skvostů"
+                  },
+                  {
+                    "rPr": "",
+                    "t": ":"
+                  }
+                ]
+              },
+              {
+                "pPr": {
+                  "buFont": "",
+                  "buChar": ""
+                },
+                "r": {
+                  "rPr": "",
+                  "t": "letohrádek královny Anny (Belveder) a Hvězda v Praze,"
+                }
+              },
+              {
+                "pPr": {
+                  "buFont": "",
+                  "buChar": ""
+                },
+                "r": [
+                  {
+                    "rPr": "",
+                    "t": "zámky"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "(Litomyšl, Červená Lhota, Nelahozeves, Velké Losiny, Opočno aj.),"
+                  }
+                ]
+              },
+              {
+                "pPr": {
+                  "buFont": "",
+                  "buChar": ""
+                },
+                "r": [
+                  {
+                    "rPr": "",
+                    "t": "dochovala se"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "historická centra měst"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "(Telč, Slavonice, Dačice, Prachatice)."
+                  }
+                ]
+              },
+              {
+                "r": [
+                  {
+                    "rPr": "",
+                    "t": "Některé renesanční památky se dostaly na prestižní seznam světového kulturního dědictví"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "UNESCO"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "(Litomyšl, Telč)."
+                  }
+                ]
+              },
+              {
+                "endParaRPr": ""
+              },
+              {
+                "r": [
+                  {
+                    "rPr": "",
+                    "t": "Za vlády"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Rudolfa II."
+                  },
+                  {
+                    "rPr": "",
+                    "t": "(1576-1611) se centrum habsburské monarchie přesouvá do Prahy. Na jeho dvoře působila řada šarlatánů (Edward"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Kelley"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "), vědců (Tycho de Brahe, Kepler) i umělců, například manýrističtí malíři"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Giuseppe"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Arcimboldo"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "["
+                  },
+                  {
+                    "rPr": "",
+                    "t": "džuzepe"
+                  },
+                  {
+                    "rPr": "",
+                    "t": ""
+                  },
+                  {
+                    "rPr": "",
+                    "t": "arčimboldo"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "] (alegorie ročních dob a živlů),"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Hans von"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Achen"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "nebo"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Bartoloměj"
+                  },
+                  {
+                    "rPr": "",
+                    "t": "Spranger"
+                  },
+                  {
+                    "rPr": "",
+                    "t": ". Rudolfovy rozsáhlé umělecké sbírky si odvezli Švédové jako válečnou kořist."
+                  }
+                ],
+                "br": {
+                  "rPr": ""
+                },
+                "endParaRPr": ""
+              }
+            ]
+          }
+        }
+      },
+      "extLst": {
+        "ext": {
+          "creationId": ""
+        }
+      }
+    },
+    "clrMapOvr": {
+      "masterClrMapping": ""
+    }
+
+}
