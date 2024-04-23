@@ -1,13 +1,8 @@
 pub mod parse_pptx {
 
-    use std::fs::{self, File, OpenOptions};
-    use std::{iter, path};
+    use std::fs::{self, File};
 
-    // <a:t> == files pw text
-    // unzip -p 'Renesance a humanismus v Čechách.pptx' ppt/slides/slide2.files| grep -si '<a:t>' |cat >> text.txt == unzio at slide 2
-
-    use serde_json::map;
-    use std::path::Path;
+    use std::path::{self, Path};
     use zip::read::ZipArchive;
 
     fn unzip_file(zip_file_path: &str, extract_to: &str) -> Result<(), Box<dyn std::error::Error>> {
@@ -34,35 +29,24 @@ pub mod parse_pptx {
         Ok(())
     }
 
-    use std::io::prelude::*;
     use std::io::BufReader;
     use xml::reader::{EventReader, XmlEvent};
 
-    fn get_text_from_xml(filename: String) -> Result<Vec<String>, Box<dyn std::error::Error>> {
+    async fn get_text_from_xml(
+        filename: String,
+    ) -> Result<Vec<String>, Box<dyn std::error::Error>> {
         let file = File::open(filename.clone()).unwrap();
         let file = BufReader::new(file);
 
-        // Create an XML event reader
         let parser = EventReader::new(file);
 
         let mut texts: Vec<String> = Vec::new();
 
-        // Iterate over the XML events
         for event in parser {
             match event {
-                // Extract text content
                 Ok(XmlEvent::Characters(text)) => {
                     //println!("{}", text);
                     texts.push(text.clone());
-                    let mut fl = OpenOptions::new()
-                        .write(true)
-                        .append(true)
-                        .open("test.txt")
-                        .unwrap();
-
-                    if let Err(e) = writeln!(fl, "{} \n ", text) {
-                        eprintln!("Couldn't write to file: {}", e);
-                    }
                 }
                 // Handle other XML events if needed
                 _ => {}
@@ -106,24 +90,32 @@ pub mod parse_pptx {
 
     use std::io;
 
-    fn read_dir_sorted<P: AsRef<Path>>(path: P) -> Result<Vec<fs::DirEntry>, io::Error> {
-        let mut file_entries: Vec<_> = fs::read_dir(path)?.filter_map(|entry| entry.ok()).collect();
-
-        file_entries.sort_by(|a, b| a.file_name().cmp(&b.file_name()));
-
-        Ok(file_entries)
-    }
-
-    pub fn get_text(file_path: String) {
+    pub async fn get_text(file_path: String, filename: Option<String>) -> Vec<String> {
         unzip_file(&file_path, "./pptx-extract").unwrap();
+
+        let mut texts: Vec<String> = Vec::new();
 
         let files_num = get_slide_number("./pptx-extract/ppt/slides".to_string());
 
-        print!("{}", files_num.clone());
+        match filename {
+            Some(fl) => {
+                if !path::Path::exists(Path::new(&fl)) {
+                    fs::write(fl, "".to_string()).unwrap();
+                }
+            }
+
+            None => {
+                if !path::Path::exists(Path::new("zapis.md")) {
+                    fs::write("zapis.md", "".to_string()).unwrap();
+                }
+            }
+        }
+
+        //print!("{}", files_num.clone());
 
         let paths = get_sorted_list(files_num - 1);
 
-        println!("{:?}", paths);
+        //println!("{:?}", paths);
 
         for path in paths {
             match path {
@@ -132,14 +124,17 @@ pub mod parse_pptx {
 
                     if path.is_file() {
                         if let Some(file_name) = path.to_str() {
-                            get_text_from_xml(file_name.to_string()).unwrap();
+                            let text = get_text_from_xml(file_name.to_string()).await.unwrap();
+                            texts.push(text.join(" "));
                         }
                     }
                 }
                 Err(e) => {
-                    println!("error");
+                    println!("error {}", e.to_string());
                 }
             }
         }
+
+        texts
     }
 }
