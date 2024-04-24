@@ -59,3 +59,34 @@ Belveder je historická stavba, nacházející se na Petroňkově zámku v Brati
  
 ___ 
  
+ # Literatura období renesance a humanismu v Čechách (Czech Renaissance and Humanism Literature)
+
+Období renesance a humanismu, které se v Čechách projevilo ve 14.–16. století, znamenalo obrovský rozvoj literatury. Tento text poskytne přehled o důležitých českých autorách, jejich dílech a tématickém zaměření, které byly charakteristické pro tuto dobu.
+
+## Duchovní literatura (Spiritual Literature)
+
+Začali ji zastřešovat především františkáni a dominikáni, mezi jejichž nejznámější patřili:
+
+1. **Jan Želivský** (asi 1390–1458): Kněz, teolog, filozof a spisovatel. Je považován za zakladatele české reformy v křesťanství. Nejvýznamnější díla: *Třináct tisíc Veršů*, *Modlitebník* a *O právu boží*.
+2. **Jiří z Poděbrad** (1394–1471): Zemský pán, král Čech a Moravy a patron literatury. Vyžádal si od Matějka z Janovic *Českou kroniku*.
+3. **Matěj z Janovic z Valdštejna** (asi 1420–1465): Kronikář a historik, autor jedné z nejstarších českých kronik – *České kroniky*.
+
+## Světová literatura (Secular Literature)
+
+Světovou literaturu v Čechách období renesance a humanismu zastřešovali hlavně čeští humanisté:
+
+1. **Jan Husa** (asi 1372–1415): Teolog, reformátor a spisovatel. Je považován za předchůdce Jana Amose Komenského. Nejvýznamnější díla: *Zjevení*, *Obrana anabaptistů* a *Česká věra*.
+2. **Jiří z Poděbrad** (1394–1471): Vedle královské funkce byla jeho hlavní láska literatura. Přeložil z latiny do češtiny díla Vergila a Cicero.
+3. **Jakub z Gunče** (asi 1450–aspoň 1529): Humanista, autor prvního učebnice české poezie *Nové umění veršů*. Vytvořil také překlad *Bible*, která byla tisknuta v roce 1579.
+
+## Dramatická literatura (Dramatic Literature)
+
+Tato literární forma se ve Čechách rozvinula na počátku 16. století:
+
+1. **Johan Christian Friedrich Högel** (1596–1660): Němec, působící v Čechách. Autor dramatických děl zabývajících se českou historií a legendami.
+2. **Josef Dobrovský** (1753–1829): Filolog, historik literatury a pedagog. Vytvořil mnoho dramatických děl, která zpracovávala českou historii i legendy.
+
+Veškeré uvedené díla jsou významnými příspěvky ke studiu a poznání literatury období renesance a humanismu v Čechách. 
+ 
+___ 
+ 
