@@ -1,7 +1,6 @@
 pub mod lamapi {
 
-
-    use std::fs::OpenOptions;
+    use std::fs::{File, OpenOptions};
 
     use reqwest;
     use serde::{Deserialize, Serialize};
@@ -14,14 +13,28 @@ pub mod lamapi {
         response: String,
         done: bool,
     }
+
+    #[derive(Serialize, Deserialize)]
+    struct Config {
+        model: String,
+    }
+
     pub async fn send_simple_question(question: String) -> Option<String> {
         let prmot = "udelej jednoduchy a strucny zapisk ve formatu markdown z cestiny ktery bude v cestine z tohoto textu prosim: ";
         let prmpt = prmot.to_string() + &question;
 
+        let mut file = File::open("config.json").expect("Failed to open file");
+
+        let mut json_str = String::new();
+        file.read_to_string(&mut json_str)
+            .expect("Failed to read file");
+        let conf: Config =
+            serde_json::from_str(&json_str).expect("JSON was not well-formatted");
+
         let prompt: Value = json!({
 
 
-        "model": "mistral",
+        "model": conf.model,
         "prompt": prmpt,
         "stream": false
 
