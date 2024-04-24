@@ -5,7 +5,6 @@ pub mod parse_pptx {
     use std::path::{self, Path};
     use zip::read::ZipArchive;
 
-
     fn unzip_file(zip_file_path: &str, extract_to: &str) -> Result<(), Box<dyn std::error::Error>> {
         let file = File::open(zip_file_path)?;
         let mut archive = ZipArchive::new(file)?;

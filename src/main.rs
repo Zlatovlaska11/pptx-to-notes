@@ -1,4 +1,3 @@
-
 use clap::Parser;
 #[derive(Parser, Debug)]
 #[command(version = "0.9", about = "simple powerpoint to notes converter", long_about = None)]
@@ -14,7 +13,6 @@ struct Args {
 
     #[arg(short, long)]
     subject: Subject,
-
 }
 
 #[derive(Debug, Clone, clap::ValueEnum)]
@@ -22,7 +20,7 @@ pub enum Subject {
     Czech,
     Vypoceka,
     Chemie,
-    Dejak
+    Dejak,
 }
 
 pub mod args_handler;

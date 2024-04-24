@@ -6,7 +6,7 @@ pub mod lamapi {
     use reqwest;
     use serde::{Deserialize, Serialize};
     use serde_json::{json, Value};
-    use sysinfo;
+    
 
     #[derive(Serialize, Deserialize)]
     struct JsonExtract {
@@ -25,22 +25,31 @@ pub mod lamapi {
         prompt_chemie: String,
     }
 
-    pub async fn send_simple_question(text: String, subject: crate::args_handler::args_handler::Subject) -> Option<String> {
-
+    pub async fn send_simple_question(
+        text: String,
+        subject: crate::args_handler::args_handler::Subject,
+    ) -> Option<String> {
         let mut file = File::open("config.json").expect("Failed to open file");
 
         let mut json_str = String::new();
         file.read_to_string(&mut json_str)
             .expect("Failed to read file");
         let conf: Config = serde_json::from_str(&json_str).expect("JSON was not well-formatted");
-        let prmot : String;
-
+        let prmot: String;
 
         match subject {
-            crate::args_handler::args_handler::Subject::Czech => prmot = format!("{} {}", conf.prompt_czech, text),
-            crate::args_handler::args_handler::Subject::Vypoceka => prmot = format!("{} {}", conf.prompt_vypocetka, text),
-            crate::args_handler::args_handler::Subject::Chemie => prmot = format!("{} {}", conf.prompt_chemie, text),
-            crate::args_handler::args_handler::Subject::Dejak => prmot = format!("{} {}", conf.prompt_dejak, text),
+            crate::args_handler::args_handler::Subject::Czech => {
+                prmot = format!("{} {}", conf.prompt_czech, text)
+            }
+            crate::args_handler::args_handler::Subject::Vypoceka => {
+                prmot = format!("{} {}", conf.prompt_vypocetka, text)
+            }
+            crate::args_handler::args_handler::Subject::Chemie => {
+                prmot = format!("{} {}", conf.prompt_chemie, text)
+            }
+            crate::args_handler::args_handler::Subject::Dejak => {
+                prmot = format!("{} {}", conf.prompt_dejak, text)
+            }
         }
 
         let prompt: Value = json!({
@@ -52,7 +61,7 @@ pub mod lamapi {
 
                     });
 
-        let ollama = Ollama::default();
+        let _ollama = Ollama::default();
 
         let client = reqwest::Client::new();
         let response = client
