@@ -14,8 +14,8 @@ pub mod args_handler {
         #[arg(short, long)]
         create_file: bool,
 
-        #[arg(short, long)]
-        output_file_name: String,
+        #[arg(short, long, default_value=Some("zapis.md"))]
+        output_file_name: Option<String>,
 
         #[arg(short, long)]
         subject: Subject,
@@ -35,9 +35,11 @@ pub mod args_handler {
         let texts;
         match args.create_file {
             true => {
-                texts =
-                    parse_pptx::parse_pptx::get_text(args.file_name, Some(args.output_file_name))
-                        .await;
+                texts = parse_pptx::parse_pptx::get_text(
+                    args.file_name,
+                    Some(args.output_file_name.clone().expect("output file not set")),
+                )
+                .await;
             }
             false => {
                 texts = parse_pptx::parse_pptx::get_text(args.file_name, None).await;
@@ -47,7 +49,7 @@ pub mod args_handler {
         //println!("{}, {}!", args.file_name, args.ollama_model);
         for txt in texts {
             let resp =
-                ollama_api_wrapper::lamapi::send_simple_question(txt, args.subject.clone()).await;
+                ollama_api_wrapper::lamapi::send_simple_question(txt, args.subject.clone(), args.output_file_name.clone()).await;
 
             match resp {
                 Some(x) => println!("{x}"),

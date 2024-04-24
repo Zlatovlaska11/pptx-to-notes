@@ -3,6 +3,7 @@ pub mod parse_pptx {
     use std::fs::{self, File};
 
     use std::path::{self, Path};
+    use ollama_rs::models::create;
     use zip::read::ZipArchive;
 
     fn unzip_file(zip_file_path: &str, extract_to: &str) -> Result<(), Box<dyn std::error::Error>> {
@@ -77,6 +78,7 @@ pub mod parse_pptx {
             });
 
             file_entries.push(file_entry);
+
         }
 
         file_entries
@@ -97,6 +99,7 @@ pub mod parse_pptx {
 
         let files_num = get_slide_number("./pptx-extract/ppt/slides".to_string());
 
+
         match filename {
             Some(fl) => {
                 if !path::Path::exists(Path::new(&fl)) {
@@ -105,8 +108,8 @@ pub mod parse_pptx {
             }
 
             None => {
-                if !path::Path::exists(Path::new("zapis.md")) {
-                    fs::write("zapis.md", "".to_string()).unwrap();
+                if !path::Path::exists(Path::new("./zapis.md")) {
+                    fs::write("./zapis.md", "".to_string()).unwrap();
                 }
             }
         }

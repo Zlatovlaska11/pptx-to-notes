@@ -25,6 +25,7 @@ ConvertPPTX2Notes is a command-line tool developed in Rust that converts PowerPo
 
 - PowerPoint presentation in PPTX format.
 - Rust compiler (for building from source).
+- ollama with any model.
 
 #### Contributions:
 
@@ -32,15 +33,11 @@ ConvertPPTX2Notes is an open-source project, and contributions are welcome! Feel
 
 #### Acknowledgments:
 
-This project was developed as a part of a high school project by [Your Name]. Special thanks to [Mentor Name] for guidance and support.
-
-#### License:
-
-ConvertPPTX2Notes is licensed under the [MIT License](link-to-license-file), allowing for free and open usage, modification, and distribution.
+This project was developed as a part of a high school project by Marian Pecqueur. Special thanks to The Primeagen for guidance and migration to rust.
 
 #### Contact:
 
-For any inquiries or support, reach out to [Your Email Address] or [Your GitHub Profile].
+For any inquiries or support, reach out to marpecqueur@gmail.com.
 
 #### Enjoy converting your presentations into notes with ConvertPPTX2Notes! 🚀📄
 

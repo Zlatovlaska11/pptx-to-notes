@@ -1,5 +1,5 @@
 [package]
-name = "pptx-to-notes"
+name = "p2n"
 version = "0.1.0"
 edition = "2021"
 

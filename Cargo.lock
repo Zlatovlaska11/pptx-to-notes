@@ -1008,6 +1008,29 @@ dependencies = [
 ]
 
 [[package]]
+name = "p2n"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "futures",
+ "glob",
+ "http",
+ "msoffice_pptx",
+ "ollama-rs",
+ "quickxml_to_serde",
+ "regex",
+ "reqwest",
+ "serde",
+ "serde-filter",
+ "serde_json",
+ "sysinfo",
+ "tokio",
+ "walkdir",
+ "xml-rs",
+ "zip 0.6.6",
+]
+
+[[package]]
 name = "parking_lot"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1102,29 +1125,6 @@ name = "powerfmt"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391"
-
-[[package]]
-name = "pptx-to-notes"
-version = "0.1.0"
-dependencies = [
- "clap",
- "futures",
- "glob",
- "http",
- "msoffice_pptx",
- "ollama-rs",
- "quickxml_to_serde",
- "regex",
- "reqwest",
- "serde",
- "serde-filter",
- "serde_json",
- "sysinfo",
- "tokio",
- "walkdir",
- "xml-rs",
- "zip 0.6.6",
-]
 
 [[package]]
 name = "proc-macro2"

@@ -1,8 +1,8 @@
 {
     "model": "mistral",
 
-    "prompt-czech": "udelej jednoduchy a strucny zapisk ve formatu markdown z cestiny ktery bude v cestine z tohoto textu prosim: ",
-    "prompt-vypocetka": "udelej jednoduchy a strucny zapisky ve formatu markdown z vypocetni techniky ktery bude v cestine a bude obsahovat vice technickych detailu okolo predmetu z tohoto textu prosim: ",
-    "prompt-chemie": "udelej jednoduchy a strucny zapisk ve formatu markdown z chemie ktery bude v cestine z tohoto textu prosim: ",
-    "prompt-dejepis": "udelej jednoduchy a strucny zapisk ve formatu markdown z dejepisu ktery bude v cestine a aby obshahoval vsechna dulezita data a dulezite pojmy z tohoto textu prosim: "
+    "prompt_czech": "udelej jednoduchy a strucny zapisk ve formatu markdown z cestiny ktery bude v cestine z tohoto textu prosim: ",
+    "prompt_vypocetka": "udelej jednoduchy a strucny zapisky ve formatu markdown z vypocetni techniky ktery bude v cestine a bude obsahovat vice technickych detailu okolo predmetu z tohoto textu prosim: ",
+    "prompt_chemie": "udelej jednoduchy a strucny zapisk ve formatu markdown z chemie ktery bude v cestine z tohoto textu prosim: ",
+    "prompt_dejak": "udelej jednoduchy a strucny zapisk ve formatu markdown z dejepisu ktery bude v cestine a aby obshahoval vsechna dulezita data a dulezite pojmy z tohoto textu prosim: "
 }

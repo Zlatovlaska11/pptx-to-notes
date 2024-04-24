@@ -6,7 +6,6 @@ pub mod lamapi {
     use reqwest;
     use serde::{Deserialize, Serialize};
     use serde_json::{json, Value};
-    
 
     #[derive(Serialize, Deserialize)]
     struct JsonExtract {
@@ -28,6 +27,7 @@ pub mod lamapi {
     pub async fn send_simple_question(
         text: String,
         subject: crate::args_handler::args_handler::Subject,
+        filename: Option<String>,
     ) -> Option<String> {
         let mut file = File::open("config.json").expect("Failed to open file");
 
@@ -75,7 +75,7 @@ pub mod lamapi {
             let body_bytes = response.bytes().await.unwrap(); // Read response body as bytes
             let data: JsonExtract = serde_json::from_slice(&body_bytes).unwrap(); // Deserialize bytes into Person struct
 
-            write_to_file(data.response.clone());
+            write_to_file(data.response.clone(), filename);
 
             Some(data.response)
         } else {
@@ -85,11 +85,16 @@ pub mod lamapi {
 
     use std::io::prelude::*;
 
-    fn write_to_file(text: String) {
+    fn write_to_file(text: String, filename: Option<String>) {
+        let mut fname = String::from("zapis.md");
+        if filename.is_some() {
+            fname = filename.unwrap()
+        }
+
         let mut fl = OpenOptions::new()
             .write(true)
             .append(true)
-            .open("./zapis.md")
+            .open(fname)
             .unwrap();
 
         if let Err(e) = writeln!(fl, "{} \n ", text) {
